@@ -1,6 +1,7 @@
 package com.westeros;
 
 import com.westeros.diagnostics.service.IDiagnosticsServiceClient;
+import com.westeros.diagnostics.threads.DiagnosticsThread;
 import com.westeros.tools.schedulers.Chron;
 import com.westeros.tools.schedulers.Scheduler;
 import com.westeros.tools.schedulers.SchedulerThread;
@@ -17,13 +18,12 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 @Slf4j
 public class DiagnosticsConfiguration {
-    private final SchedulerThread schedulerThread;
-    private final IDiagnosticsServiceClient diagnosticsServiceClient;
-    private final Scheduler scheduler;
+
+    private final DiagnosticsThread diagnostics;
 
     @PostConstruct
     public void runScheduler(){
-
+        diagnostics.startNewThread();
 
     }
 }

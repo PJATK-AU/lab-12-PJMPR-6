@@ -9,11 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="westeros-movies-updater" />
         <module name="westeros-tools" />
-        <module name="westeros-data" />
         <module name="westeros-web-api" />
+        <module name="westeros-data" />
         <module name="westeros-diagnostics-service" />
-        <module name="westeros-diagnostics-tools" />
         <module name="westeros-movies-client" />
+        <module name="westeros-diagnostics-tools" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
